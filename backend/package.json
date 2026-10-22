@@ -1,7 +1,7 @@
 {
-  "name": "drabreakfast",
+  "name": "drameal",
   "version": "0.1.0",
-  "description": "Drabreak meal bot: breakfast and dinner slot polls for Telegram",
+  "description": "Drameal bot: breakfast and dinner slot polls for Telegram",
   "main": "index.js",
   "type": "module",
   "scripts": {

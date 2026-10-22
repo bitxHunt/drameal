@@ -1,4 +1,4 @@
-# 🍽️ Drabreak Bot
+# 🍽️ Drameal Bot
 
 ## Description
 
@@ -6,7 +6,7 @@ A Telegram meal bot for the group chat ([@drabreak_bot](https://t.me/drabreak_bo
 
 ## Inspiration
 
-Group meal plans fall apart in the chat: "what time?" gets asked five times and nobody knows who's coming when. **Drabreak** puts one clean poll in the chat, and the streaks give everyone a reason to keep turning up.
+Group meal plans fall apart in the chat: "what time?" gets asked five times and nobody knows who's coming when. **Drameal** puts one clean poll in the chat, and the streaks give everyone a reason to keep turning up.
 
 ## Commands
 
