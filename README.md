@@ -2,7 +2,7 @@
 
 ## Description
 
-A Telegram meal bot for the group chat ([@drabreak_bot](https://t.me/drabreak_bot)). Anyone in the chat sends a breakfast or dinner poll, everyone votes on the slot they're joining, and showing up day after day builds a **streak**. Breakfast and dinner streaks are separate. No penalties, no check-ins: your vote is your word.
+A Telegram meal bot for the group chat ([@drameal_bot](https://t.me/drameal_bot)). Anyone in the chat sends a breakfast or dinner poll, everyone votes on the slot they're joining, and showing up day after day builds a **streak**. Breakfast and dinner streaks are separate. No penalties, no check-ins: your vote is your word.
 
 ## Inspiration
 
