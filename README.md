@@ -91,6 +91,7 @@ backend/
     ├── types/
     │   └── bot.type.ts          # Per-meal settings: slots, streak days, lock time
     └── utils/
+        ├── logError.ts          # Logs errors with the bot token masked
         └── time.ts              # Today's date and time in TIMEZONE, weekday, poll title date
 ```
 

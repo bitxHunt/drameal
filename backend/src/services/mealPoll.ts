@@ -1,4 +1,5 @@
 import { Api, Context } from "grammy";
+import { logError } from "@/utils/logError.js";
 import { Meal, Prisma } from "@/generated/client.js";
 import { MEAL_CONFIG } from "@/types/bot.type.js";
 import { formatPollDate, nowInTimezone } from "@/utils/time.js";
@@ -19,7 +20,7 @@ export const closeExpiredPolls = async (api: Api, chatId: bigint) => {
     try {
       await api.stopPoll(Number(poll.chatId), poll.messageId);
     } catch (error) {
-      console.log("Error stopping poll: ", error); // e.g. message deleted, still mark it closed
+      logError("Error stopping poll: ", error); // e.g. message deleted, still mark it closed
     }
     await mealPollModel.markClosed(poll.id);
   }

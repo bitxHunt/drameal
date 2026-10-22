@@ -1,4 +1,5 @@
 import { Bot } from "grammy";
+import { logError } from "@/utils/logError.js";
 import { env } from "@/config/env.js";
 import * as breakfastCommand from "@/bot/commands/breakfast.js";
 import * as dinnerCommand from "@/bot/commands/dinner.js";
@@ -15,7 +16,7 @@ bot.command("test", testCommand.handle);
 
 bot.on("poll_answer", pollAnswerEvent.handle);
 
-bot.catch((error) => console.log("Unhandled bot error: ", error));
+bot.catch((error) => logError("Unhandled bot error: ", error));
 
 // poll_answer must be listed explicitly so vote changes reach the bot.
 const ALLOWED_UPDATES = ["message", "poll_answer"] as const;

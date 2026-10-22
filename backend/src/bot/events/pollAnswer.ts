@@ -1,4 +1,5 @@
 import { Context } from "grammy";
+import { logError } from "@/utils/logError.js";
 import { closeExpiredPolls, isPastCutoff } from "@/services/mealPoll.js";
 import * as mealPollModel from "@/models/mealPollModel.js";
 import * as userModel from "@/models/userModel.js";
@@ -28,6 +29,6 @@ export const handle = async (ctx: Context) => {
       await voteModel.saveVote(poll.id, userId, answer.option_ids[0]);
     }
   } catch (error) {
-    console.log("Error handling poll answer: ", error);
+    logError("Error handling poll answer: ", error);
   }
 };

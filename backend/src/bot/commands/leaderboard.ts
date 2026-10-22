@@ -1,4 +1,5 @@
 import { Context } from "grammy";
+import { logError } from "@/utils/logError.js";
 import { Meal } from "@/generated/client.js";
 import { MEAL_CONFIG } from "@/types/bot.type.js";
 import { closeExpiredPolls } from "@/services/mealPoll.js";
@@ -22,7 +23,7 @@ export const handle = async (ctx: Context) => {
 
     await ctx.reply(["🏆 Leaderboard", ...sections].join("\n\n"));
   } catch (error) {
-    console.log("Error handling /leaderboard: ", error);
+    logError("Error handling /leaderboard: ", error);
     await ctx.reply("Something went wrong loading the leaderboard.");
   }
 };
