@@ -49,11 +49,11 @@ Create a **Web Service** from this repo (free tier) with:
 | Setting | Value |
 |---|---|
 | Root Directory | `backend` |
-| Build Command | `pnpm install && pnpm prisma migrate deploy && pnpm build` |
+| Build Command | `pnpm install --prod=false && pnpm prisma migrate deploy && pnpm build` |
 | Start Command | `pnpm start` |
 | Health Check Path | `/health` |
 
-Environment variables: `NODE_ENV=production`, `PORT=10000`, `BOT_TOKEN`, `DATABASE_URL`, `TIMEZONE=Asia/Singapore`, `WEBHOOK_URL=https://<service>.onrender.com/telegram`, `WEBHOOK_SECRET=<any random string>`.
+Environment variables: `NODE_ENV=production`, `NODE_VERSION=22`, `PORT=10000`, `BOT_TOKEN`, `DATABASE_URL`, `TIMEZONE=Asia/Singapore`, `WEBHOOK_URL=https://<service>.onrender.com/telegram`, `WEBHOOK_SECRET=<any random string>`.
 
 The free tier sleeps after 15 minutes idle. With `WEBHOOK_URL` set, Telegram wakes it with every command and vote, so votes are counted on time. Leave the webhook variables blank only on a host that never sleeps (the bot then uses long polling).
 
