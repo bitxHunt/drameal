@@ -8,4 +8,4 @@ app.listen(PORT, () => {
   console.log(`Health-check server running on port ${PORT}`);
 });
 
-startBot();
+startBot().catch((error) => console.log("Error starting bot: ", error));

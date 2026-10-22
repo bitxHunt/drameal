@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Meal {
+  BREAKFAST
+  DINNER
+}
+
+model User {
+  id        BigInt  @id // Telegram user id
+  firstName String
+  username  String?
+
+  votes PollVote[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// One row per poll the bot sends, at most one per chat, meal and day. Streaks are
+// worked out from these rows when /leaderboard runs, so there is nothing to submit.
+model MealPoll {
+  id        String  @id // Telegram poll id
+  chatId    BigInt
+  messageId Int
+  meal      Meal
+  date      String // YYYY-MM-DD in env.TIMEZONE
+  closed    Boolean @default(false) // stopPoll already called after the cutoff
+
+  votes PollVote[]
+
+  createdAt DateTime @default(now())
+
+  @@unique([chatId, meal, date])
+}
+
+// A user's current answer on one poll. Changing the answer updates the row,
+// retracting it deletes the row. Answers after the cutoff are ignored.
+model PollVote {
+  pollId   String
+  userId   BigInt
+  optionId Int // index into the meal's slots
+
+  poll MealPoll @relation(fields: [pollId], references: [id], onDelete: Cascade)
+  user User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  updatedAt DateTime @updatedAt
+
+  @@id([pollId, userId])
+}
