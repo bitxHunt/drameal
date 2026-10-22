@@ -1,11 +1,11 @@
 import { Bot } from "grammy";
-import { logError } from "@/utils/logError.js";
 import { env } from "@/config/env.js";
 import * as breakfastCommand from "@/bot/commands/breakfast.js";
 import * as dinnerCommand from "@/bot/commands/dinner.js";
 import * as leaderboardCommand from "@/bot/commands/leaderboard.js";
 import * as testCommand from "@/bot/commands/test.js";
 import * as pollAnswerEvent from "@/bot/events/pollAnswer.js";
+import { logError } from "@/utils/logError.js";
 
 export const bot = new Bot(env.BOT_TOKEN);
 

@@ -1,7 +1,7 @@
 import { Context } from "grammy";
-import { logError } from "@/utils/logError.js";
 import { Meal } from "@/generated/client.js";
 import { sendMealPoll } from "@/services/mealPoll.js";
+import { logError } from "@/utils/logError.js";
 
 export const handle = async (ctx: Context) => {
   try {

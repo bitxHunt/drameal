@@ -1,9 +1,9 @@
 import { Context } from "grammy";
-import { logError } from "@/utils/logError.js";
-import { closeExpiredPolls, isPastCutoff } from "@/services/mealPoll.js";
 import * as mealPollModel from "@/models/mealPollModel.js";
 import * as userModel from "@/models/userModel.js";
 import * as voteModel from "@/models/voteModel.js";
+import { closeExpiredPolls, isPastCutoff } from "@/services/mealPoll.js";
+import { logError } from "@/utils/logError.js";
 
 // Fires every time someone picks, changes or retracts an answer on a non-anonymous poll.
 // Answers count until the meal's cutoff; after that they are ignored and the poll is closed.

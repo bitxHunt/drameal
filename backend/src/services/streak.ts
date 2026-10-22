@@ -1,8 +1,8 @@
 import { Meal } from "@/generated/client.js";
 import { LEADERBOARD_SIZE, MEAL_CONFIG } from "@/types/bot.type.js";
-import { weekdayOf } from "@/utils/time.js";
-import { isPastCutoff } from "@/services/mealPoll.js";
 import * as mealPollModel from "@/models/mealPollModel.js";
+import { isPastCutoff } from "@/services/mealPoll.js";
+import { weekdayOf } from "@/utils/time.js";
 
 // Walks the counted days in order: attending extends the run, missing resets it.
 // `days` must be sorted ascending.

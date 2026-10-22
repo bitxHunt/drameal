@@ -1,9 +1,9 @@
 import { Context } from "grammy";
-import { logError } from "@/utils/logError.js";
 import { Meal } from "@/generated/client.js";
 import { MEAL_CONFIG } from "@/types/bot.type.js";
 import { closeExpiredPolls } from "@/services/mealPoll.js";
 import { getLeaderboard } from "@/services/streak.js";
+import { logError } from "@/utils/logError.js";
 
 export const handle = async (ctx: Context) => {
   try {
