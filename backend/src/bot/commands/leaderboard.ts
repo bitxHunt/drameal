@@ -1,5 +1,5 @@
 import { Context } from "grammy";
-import { Meal } from "@/generated/client";
+import { Meal } from "@/generated/client.js";
 import { MEAL_CONFIG } from "@/types/bot.type.js";
 import { closeExpiredPolls } from "@/services/mealPoll.js";
 import { getLeaderboard } from "@/services/streak.js";

@@ -1,4 +1,4 @@
-import { Meal } from "@/generated/client";
+import { Meal } from "@/generated/client.js";
 import { LEADERBOARD_SIZE, MEAL_CONFIG } from "@/types/bot.type.js";
 import { weekdayOf } from "@/utils/time.js";
 import { isPastCutoff } from "@/services/mealPoll.js";

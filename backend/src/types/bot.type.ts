@@ -1,4 +1,4 @@
-import { Meal } from "@/generated/client";
+import { Meal } from "@/generated/client.js";
 
 // Days use JS numbering: 0 = Sunday ... 6 = Saturday. A poll sent on any other
 // day still works, it just never adds to or breaks a streak.

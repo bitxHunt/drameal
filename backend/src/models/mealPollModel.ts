@@ -1,5 +1,5 @@
 import { prisma } from "@/config/index.js";
-import { Meal } from "@/generated/client";
+import { Meal } from "@/generated/client.js";
 
 export const createPoll = (data: {
   id: string;

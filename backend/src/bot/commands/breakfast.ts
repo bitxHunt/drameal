@@ -1,5 +1,5 @@
 import { Context } from "grammy";
-import { Meal } from "@/generated/client";
+import { Meal } from "@/generated/client.js";
 import { sendMealPoll } from "@/services/mealPoll.js";
 
 export const handle = async (ctx: Context) => {

@@ -1,6 +1,10 @@
 generator client {
   provider = "prisma-client"
   output   = "../src/generated"
+
+  // Plain Node ESM needs ".js" on every import inside the generated client.
+  moduleFormat        = "esm"
+  importFileExtension = "js"
 }
 
 datasource db {

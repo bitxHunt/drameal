@@ -1,5 +1,5 @@
 import { Api, Context } from "grammy";
-import { Meal, Prisma } from "@/generated/client";
+import { Meal, Prisma } from "@/generated/client.js";
 import { MEAL_CONFIG } from "@/types/bot.type.js";
 import { formatPollDate, nowInTimezone } from "@/utils/time.js";
 import * as mealPollModel from "@/models/mealPollModel.js";
