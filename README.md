@@ -10,8 +10,8 @@ Group meal plans fall apart in the chat: "what time?" gets asked five times and 
 
 ## Commands
 
-- `/breakfast` sends "<date> OG Breakfast" with slots 7:30, 8:00, 8:30, 9:00 AM
-- `/dinner` sends "<date> OG Dinner" with slots 6:00, 6:30, 7:00, 7:30 PM
+- `/breakfast` sends "<date> Breakfast" with slots 7:30, 8:00, 8:30, 9:00 AM
+- `/dinner` sends "<date> Dinner" with slots 6:00, 6:30, 7:00, 7:30 PM
 - `/leaderboard` shows the top 10 current streaks (and best ever) for each meal
 
 Only one breakfast and one dinner poll per day. Sending it again replies to the existing poll instead.

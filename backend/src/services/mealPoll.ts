@@ -32,7 +32,7 @@ const replyAlreadySent = (ctx: Context, meal: Meal, messageId: number) =>
     reply_parameters: { message_id: messageId, allow_sending_without_reply: true },
   });
 
-// Posts today's non-anonymous "<D Month> OG <Meal>" poll and records it so the
+// Posts today's non-anonymous "<D Month> <Meal>" poll and records it so the
 // answers can be tracked for streaks. Only one poll per meal per day per chat.
 export const sendMealPoll = async (ctx: Context, meal: Meal) => {
   if (!ctx.chat) return;
@@ -54,7 +54,7 @@ export const sendMealPoll = async (ctx: Context, meal: Meal) => {
   }
 
   const message = await ctx.replyWithPoll(
-    `${formatPollDate(date)} OG ${config.label}`,
+    `${formatPollDate(date)} ${config.label}`,
     config.slots.map((slot) => ({ text: slot })),
     { is_anonymous: false },
   );
